@@ -5,6 +5,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.options("*", cors());
 app.options("/create-payment", cors());
 
 app.get("/", (req, res) => {
