@@ -2,7 +2,15 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/create-payment",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/webhook",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/",
       "destination": "/api/index.js"
     }
   ]
