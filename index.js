@@ -129,9 +129,9 @@ app.get("/verify-payment", async (req, res) => {
     }
 
     return res.status(400).json({
-      success: false,
-      error: "Payment was not successful"
-    });
+  error: "Unable to create payment",
+  flutterwave: data
+});
 
   } catch (error) {
     console.error("Verification error:", error);
