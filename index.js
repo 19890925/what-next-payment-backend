@@ -70,8 +70,9 @@ app.post("/create-payment", async (req, res) => {
     console.error("Flutterwave error:", data);
 
     return res.status(400).json({
-      error: "Unable to create payment"
-    });
+  error: "Unable to create payment",
+  flutterwave: data
+});
 
   } catch (error) {
     console.error("Payment error:", error);
